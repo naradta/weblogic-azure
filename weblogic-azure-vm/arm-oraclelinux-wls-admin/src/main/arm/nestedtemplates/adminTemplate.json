@@ -263,7 +263,7 @@
       },
       {
          "type": "Microsoft.Network/networkSecurityGroups",
-         "apiVersion": "${azure.apiVersionForNetworkSecurityGroups}",
+         "apiVersion": "2021-08-01",
          "condition": "[equals(parameters('virtualNetworkNewOrExisting'), 'new')]",
          "name": "[variables('name_networkSecurityGroup')]",
          "location": "[parameters('location')]",

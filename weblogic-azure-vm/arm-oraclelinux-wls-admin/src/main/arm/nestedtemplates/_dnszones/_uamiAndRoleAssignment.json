@@ -17,13 +17,13 @@
     "resources": [
       {
         "type": "Microsoft.ManagedIdentity/userAssignedIdentities",
-        "apiVersion": "${azure.apiVersionForIndentity}",
+        "apiVersion": "2018-11-30",
         "name": "[parameters('uamiName')]",
         "location": "[parameters('location')]"
       },
       {
         "type": "Microsoft.Resources/deployments",
-        "apiVersion": "${azure.apiVersionForDeploymentScript}",
+        "apiVersion": "2020-10-01",
         "name": "[variables('name_deploymentScriptContributorRoleAssignmentName')]",
         "subscriptionId": "[subscription().subscriptionId]",
         "location": "[parameters('location')]",

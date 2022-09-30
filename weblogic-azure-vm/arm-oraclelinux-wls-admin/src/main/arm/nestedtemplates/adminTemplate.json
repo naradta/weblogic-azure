@@ -328,7 +328,7 @@
          ]
       },
       {
-         "apiVersion": "${azure.apiVersionForPrivateEndpoint}",
+         "apiVersion": "2021-05-01",
          "name": "[variables('name_privateSaEndpoint')]",
          "type": "Microsoft.Network/privateEndpoints",
          "location": "[parameters('location')]",
@@ -377,7 +377,7 @@
          }
       },
       {
-         "apiVersion": "${azure.apiVersionForPublicIPAddresses}",
+         "apiVersion": "2021-08-01",
          "type": "Microsoft.Network/publicIPAddresses",
          "condition": "[equals(parameters('virtualNetworkNewOrExisting'), 'new')]",
          "name": "[variables('name_publicIPAddress')]",
@@ -390,7 +390,7 @@
          }
       },
       {
-         "apiVersion": "${azure.apiVersionForVirtualNetworks}",
+         "apiVersion": "2021-08-01",
          "type": "Microsoft.Network/virtualNetworks",
          "condition": "[equals(parameters('virtualNetworkNewOrExisting'), 'new')]",
          "name": "[variables('name_virtualNetwork')]",
@@ -466,7 +466,7 @@
          }
       },
       {
-         "apiVersion": "${azure.apiVersionForVirtualMachines}",
+         "apiVersion": "2021-11-01",
          "type": "Microsoft.Compute/virtualMachines",
          "name": "[parameters('adminVMName')]",
          "location": "[parameters('location')]",
@@ -522,7 +522,7 @@
       },
       {
          "name": "[concat(parameters('adminVMName'),'/newuserscript')]",
-         "apiVersion": "${azure.apiVersionForVirtualMachines}",
+         "apiVersion": "2021-11-01",
          "type": "Microsoft.Compute/virtualMachines/extensions",
          "location": "[parameters('location')]",
          "dependsOn": [

@@ -473,7 +473,7 @@
          }
       },
       {
-         "apiVersion": "${azure.apiVersionForNetworkInterfaces}",
+         "apiVersion": "2021-08-01",
          "type": "Microsoft.Network/networkInterfaces",
          "condition": "[equals(parameters('virtualNetworkNewOrExisting'), 'new')]",
          "name": "[variables('name_nic_with_pub_ip')]",
@@ -503,7 +503,7 @@
          }
       },
       {
-         "apiVersion": "${azure.apiVersionForNetworkInterfaces}",
+         "apiVersion": "2021-08-01",
          "type": "Microsoft.Network/networkInterfaces",
          "condition": "[equals(parameters('virtualNetworkNewOrExisting'), 'existing')]",
          "name": "[variables('name_nic_without_pub_ip')]",
